@@ -13,6 +13,7 @@ constructor (page:Page){
     this.username=page.getByPlaceholder('Username')
     this.password=page.getByPlaceholder('Password')
     this.login=page.getByRole('button',{name:'Login'})
+    yyy
 
 }
 async Navigate(){
