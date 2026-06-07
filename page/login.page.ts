@@ -5,6 +5,7 @@ export class Loginpage{
     readonly username:Locator
     readonly password:Locator
     readonly login:Locator
+    readonly button:Locator
 
 
 constructor (page:Page){
