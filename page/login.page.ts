@@ -5,7 +5,7 @@ export class Loginpage{
     readonly username:Locator
     readonly password:Locator
     readonly login:Locator
-    readonly button:Locator
+  
 
 
 constructor (page:Page){
@@ -16,7 +16,7 @@ constructor (page:Page){
 
 }
 async Navigate(){
-    await this.page.goto('https://www.saucedemo.com/')
+    await this.page.goto(process.env.BASE_URL!)
 }
 
 async loginpage(){
