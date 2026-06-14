@@ -20,7 +20,7 @@ test.beforeEach('index page test',async({page})=>{
     //navigate to that page
     
     //await index.navigate()
-    await expect(page).toHaveURL(process.env_INDEX_LINK!)
+    await expect(page).toHaveURL(process.env.INDEX_LINK!)
     await expect(page.getByRole('button',{name:'Add to cart'}).first()).toBeVisible()
     await expect(page.getByRole('button',{name:'Add to cart'}).first()).toBeEnabled()
 
@@ -28,10 +28,10 @@ test.beforeEach('index page test',async({page})=>{
 })
 
 test('add to cart btn click',async({page})=>{
-    await index.addToCartbtn()
+    await index.addTocart()
     await expect(page.getByRole('button',{name:'Remove'}).first()).toBeEnabled()
     await expect(page.getByRole('button',{name:'Remove'}).first()).toBeEnabled()
-    await index.removeBtn()
+    await index.removebtn()
     await expect(page.getByRole('button',{name:'Add to cart'}).first()).toBeVisible()
     await expect(page.getByRole('button',{name:'Add to cart'}).first()).toBeEnabled()
     await expect(page.locator('#shopping_cart_container')).toBeVisible()
